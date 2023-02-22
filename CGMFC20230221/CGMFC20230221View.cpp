@@ -51,7 +51,7 @@ BOOL CCGMFC20230221View::PreCreateWindow(CREATESTRUCT& cs)
 
 // CCGMFC20230221View drawing
 
-void CCGMFC20230221View::OnDraw(CDC* /*pDC*/)
+void CCGMFC20230221View::OnDraw(CDC* pDC)
 {
 	CCGMFC20230221Doc* pDoc = GetDocument();
 	ASSERT_VALID(pDoc);
@@ -59,6 +59,9 @@ void CCGMFC20230221View::OnDraw(CDC* /*pDC*/)
 		return;
 
 	// TODO: add draw code for native data here
+	pDC->MoveTo(100, 100);
+	pDC->LineTo(300, 300);
+
 }
 
 
